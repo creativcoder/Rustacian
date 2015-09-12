@@ -12,7 +12,7 @@ enum Optional {
 }
 
 mod circle_util {
-	
+
 pub fn get_radius() -> Option<f32> {
 Some(3.45)
 }
@@ -34,7 +34,10 @@ println!("The Area of Circle is {:?} (m)^2",consts::PI*rad*rad);
 
 //println!("{:?}",u32::from_str_radix(&"34",10).unwrap());
 	let num_arr = vec![24,204,34,32,24,234];
-	println!("The minimum from the list is  {:?}",::circle_util::get_minimum(num_arr));
+
+	let access_outer = |x:&Vec<i32>| {println!("{:?}",x[3]);};
+	
+	//println!("The minimum from the list is  {:?}",::circle_util::get_minimum(num_arr));
 
 	let str1 = "John";  //this is a string slice
 	let str2 = "Doe" ;
@@ -89,4 +92,5 @@ println!("The Area of Circle is {:?} (m)^2",consts::PI*rad*rad);
 
 	let y:&f64=&56.;
 	println!("{:?}",y );
+	access_outer(&num_arr);
 }
