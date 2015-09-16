@@ -13,6 +13,17 @@ pub fn abs(x:i32) -> i32 {
 	else {x}
 }
 
+pub fn test_platform() {
+
+	#[cfg(target_os = "windows")]
+	fn on_windows() {println!("You are running windows");}
+	
+	#[cfg(target_os = "linux")]
+	fn on_windows() {println!("You are running linux");}
+
+	on_windows();
+}
+
 fn main() {
 	let health = -243;
 	let result = if health <=0 {"Game over"} else {"Continue Playing"};
@@ -34,4 +45,6 @@ fn main() {
 		print!("{}",i);
 	}*/
 	println!("{:?}",abs(-3));
+
+	test_platform();
 }
