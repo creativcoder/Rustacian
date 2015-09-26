@@ -1,2 +1,2 @@
 # Rustacian
-My Repo, where i push code consisting of code examples and idioms prevailant in Rust Language
+My Repo containing some rust code examples, mainly as a learning place.
