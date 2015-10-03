@@ -32,8 +32,7 @@ fn read_vec(rang:u32) -> Vec<i32> {
 }
 
 
-
-fn main(){
+pub fn main(){
 	let vec_list = read_vec(0);
 	let min = vec_min(vec_list);
 	match min {
