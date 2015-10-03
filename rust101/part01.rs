@@ -44,6 +44,7 @@ fn vec_min(vec:Vec<i32>) -> NumberOrNothing {
 }
 
 // Exercise 01.1 -----------------------------------------------
+
 fn vec_sum(vec:Vec<i32>) -> NumberOrNothing {
 	match vec.len() {
 		0 => {Nothing}
@@ -51,6 +52,18 @@ fn vec_sum(vec:Vec<i32>) -> NumberOrNothing {
 	}
 }
 //-------------------------------------------------Exercise 01.1
+
+
+
+// Exercise 01.2 -----------------------------------------------
+
+fn vec_print(vec:Vec<i32>) {
+	for e in vec {
+		println!("{}",e);
+	}
+}
+//-------------------------------------------------Exercise 01.2
+
 
 
 fn read_vec(rang:u32) -> Vec<i32> {
@@ -66,5 +79,9 @@ pub fn main(){
 	let vec_list = read_vec(8);
 	let min = vec_min(vec_list);
 	vec_sum(vec![5,4,3,4]).print_sum();
+	vec_print(vec![8,9,3,5]);
 	min.print_min();
 }
+
+
+
