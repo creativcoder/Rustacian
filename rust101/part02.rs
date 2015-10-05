@@ -1,11 +1,12 @@
 // implementing generic traits for vec_min and added trait impls for floats
 
+
 pub enum SomethingOrNothing<T> {
 	Something(T),
 	Nothing,
 }
 
-use self::SomethingOrNothing::*;
+pub use self::SomethingOrNothing::*;
 
 // taking aliases for some instances of generic type
 type NumberOrNothing = SomethingOrNothing<i32>;
@@ -52,7 +53,7 @@ impl NumberOrNothing {
 	pub fn print(self) {
 		match self {
 			Nothing => println!("The nunber is : <nothing>"),
-			Something(n) => println!("The number is {}",n),
+			Something(n) => println!("The minimum no from the vec is {}",n),
 		};
 	}
 }
@@ -82,3 +83,4 @@ pub fn main() {
 	min_int.print();
 	min_float.print();
 }
+
