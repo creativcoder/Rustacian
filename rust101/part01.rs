@@ -23,6 +23,9 @@ impl NumberOrNothing {
 use self::NumberOrNothing::{Number,Nothing};
 
 
+//fn sqr(a:i32) -> i32 {a*a}
+//fn abs(a:i32) -> i32 { if a>=0 {a} else {-a} }
+
 fn vec_min(vec:Vec<i32>) -> NumberOrNothing {
 
 	//min_i32 is a clousure
