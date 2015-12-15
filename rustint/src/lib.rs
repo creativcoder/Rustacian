@@ -12,7 +12,6 @@ pub struct BigInt {
 impl BigInt {
 
     pub fn new(precision:usize) -> Self {
-
         BigInt { val:Some(Vec::with_capacity(precision)),sign:'+' }
     }
 
@@ -21,12 +20,13 @@ impl BigInt {
         /*let mut sign:char = '+';*/
         let mut digit:u64;
         for i in num_str.chars().rev() {
-            /*if i == '-' {sign='-';continue;}
-            if i == '+' {continue;}*/
             digit = i.to_string().parse::<u64>().unwrap();
             val.push(digit);
         }
-
+        while(val.last()==Some(&0)){
+            val.pop();
+        }
+        println!("{:?}",val );
         BigInt { val: Some(val),sign:'+' }
     }
 }

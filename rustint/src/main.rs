@@ -10,8 +10,8 @@ fn main() {
    let big_rhs = BigInt::from_str("9934554345432423442423434534534534325");
    let small_lhs = BigInt::from_str("111");
    let small_rhs = BigInt::from_str("22992");
-   let sub_lhs = BigInt::from_str("99999");
-   let sub_rhs = BigInt::from_str("111111111111111111111");
+   let sub_lhs = BigInt::from_str("000000010");
+   let sub_rhs = BigInt::from_str("7881");
    let sum = a + b;
    let sum_big = big_lhs + big_rhs;
    let sum_small = small_lhs + small_rhs;
