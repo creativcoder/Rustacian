@@ -4,7 +4,7 @@ pub struct BigInt {
 }
 
 impl BigInt {
-    fn new(x:&str) -> Self {
+    fn new(x: &str) -> Self {
         if x.len() == 0 {
             BigInt { data: vec![] }
         } else {
@@ -18,13 +18,15 @@ impl BigInt {
         }
     }
     fn test_invariant(&self) -> bool {
-        if self.data.len() == 0 {true} else {
-            self.data[self.data.len()-1] != 0 
+        if self.data.len() == 0 {
+            true
+        } else {
+            self.data[self.data.len() - 1] != 0
         }
     }
-    fn add(&self,other: &BigInt) -> Self {
-        let mut result:Vec<u64> = Vec::new();
-        for i in 0..(self.data.len()-1) {
+    fn add(&self, other: &BigInt) -> Self {
+        let mut result: Vec<u64> = Vec::new();
+        for i in 0..(self.data.len() - 1) {
             result[i] = self.data[i] + other.data[i];
         }
     }
@@ -36,5 +38,5 @@ fn main() {
     let big_num = BigInt::new(n);
     let big_num2 = BigInt::new(n2);
     let result = big_num.add(&big_num2);
-    println!("{:?}",big_num );
+    println!("{:?}", big_num);
 }

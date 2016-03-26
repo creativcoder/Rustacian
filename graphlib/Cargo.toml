@@ -1,0 +1,6 @@
+[package]
+name = "graphlib"
+version = "0.1.0"
+authors = ["Rahul Sharma <rsconceptx@gmail.com>"]
+
+[dependencies]
